@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+venv/
+
+# YOLO training artifacts
+runs/*
+
+# Ignore all weights by default
+weights/*
+*.pt
+
+# BUT allow base production weights
+!weights/base_wagon_yolo.pt
+
+
+# Datasets
+dataset/
+IMAGE/
+report/
+
+# OS
+.DS_Store
+Thumbs.db
