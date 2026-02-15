@@ -1,0 +1,6 @@
+# data.yaml — описание датасета для YOLOv8
+train: dataset/images/train
+val: dataset/images/val
+
+nc: 1   # количество классов
+names: ['wagon']
