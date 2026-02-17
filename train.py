@@ -48,7 +48,7 @@ print("Classes:", train_ds.classes)
 # MODEL
 # ------------------
 model = models.mobilenet_v3_small(weights="IMAGENET1K_V1")
-model.classifier[3] = nn.Linear(model.classifier[3].in_features, 3)
+model.classifier[3] = nn.Linear(model.classifier[3].in_features, 2)
 model.to(DEVICE)
 
 # ------------------

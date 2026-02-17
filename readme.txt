@@ -1,16 +1,13 @@
 4️⃣ Обновление README
 
-Можно переписать readme.txt или создать README.md. Например, в формате Markdown:
-
-# DURKA - MobileNetV3 Wagon Classifier
+# DURKA - MobileNetV3 Wagon Classifier - 2 класса
 
 ## Модель
 
 - MobileNetV3-Small
 - Классы:
-  1. `empty` — кадр без вагона
-  2. `one_wagon` — цельный вагон
-  3. `transition` — кадр с переходом (окончание вагонов)
+  1. `one_wagon` — цельный вагон
+  2. `transition` — кадр с переходом (окончание вагонов)
 
 ## Использование
 
