@@ -14,7 +14,7 @@ OUTPUT_DIR = BASE_DIR / "output_image"
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = "cuda" # я отключил CPU потому что мне лучше ошибка, чем CPU 
 IMG_SIZE = 224
 MODEL_PATH = "mobilenet_wagon_best.pt"
 
@@ -33,7 +33,7 @@ transform = transforms.Compose([
 # -------------------
 model = models.mobilenet_v3_small(weights=None)
 model.classifier[3] = torch.nn.Linear(model.classifier[3].in_features, 2)
-model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
+model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE, weights_only=True)) # не забывай weights_only=True, тебе нужны только весы
 model.to(DEVICE)
 model.eval()
 

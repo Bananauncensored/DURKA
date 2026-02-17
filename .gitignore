@@ -20,7 +20,10 @@ weights/*
 dataset/
 IMAGE/
 report/
-
+# убрал передачу фоток из теста
+test/
+input_image/*
+output_image/*
 # OS
 .DS_Store
 Thumbs.db
