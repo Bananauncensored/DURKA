@@ -34,4 +34,46 @@ JSON отчёт с количеством вагонов и кадрами на 
 
 Первая и последняя фотка каждого вагона всегда сохраняются
 
-Пустые кадры (empty) не отправляются
+Кадры (`transition`) не отправляются
+
+
+Если нужно добавить 3 класс. 
+
+В заходим в папку dataset добавляем в каждую из папке новые классы.
+
+--dataset|----test|------one_wagon
+         |        |------transition
+         |        |------"новый_класс"
+         |
+         |-----val|------one_wagon
+         |        |------transition
+         |        |------"новый_класс"
+         |
+         |
+         |---train|------one_wagon
+         |        |------transition
+         |        |------"новый_класс"
+
+
+в файле train.py меняем эти строку кода 
+model.classifier[3] = nn.Linear(model.classifier[3].in_features, 2)
+                          ||
+                          \/
+model.classifier[3] = nn.Linear(model.classifier[3].in_features, 3)
+
+в файле test.py меняем строку
+CLASS_NAMES = ["one_wagon", "transition"]
+                          ||
+                          \/
+CLASS_NAMES = ["новый_класс","one_wagon", "transition"]
+
+
+
+model.classifier[3] = torch.nn.Linear(model.classifier[3].in_features, 2)
+                          ||
+                          \/
+model.classifier[3] = nn.Linear(model.classifier[3].in_features, 3)
+
+
+
+
