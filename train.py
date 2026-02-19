@@ -12,7 +12,7 @@ DATASET_DIR = Path("dataset")
 BATCH_SIZE = 16          # CPU-friendly
 EPOCHS = 30
 LR = 1e-4
-IMG_SIZE = 224
+IMG_SIZE = 400
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ------------------

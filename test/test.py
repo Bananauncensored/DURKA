@@ -15,7 +15,7 @@ OUTPUT_DIR = BASE_DIR / "output_image"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-IMG_SIZE = 224
+IMG_SIZE = 400
 MODEL_PATH = "mobilenet_wagon_best.pt"
 
 # -------------------
