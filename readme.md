@@ -1,6 +1,6 @@
 4️⃣ Обновление README
 
-# DURKA - MobileNetV3 Wagon Classifier - 2 класса
+# DURKA - MobileNetV3 Wagon Classifier - 2 класса (доработанная логика)
 
 ## Модель
 
